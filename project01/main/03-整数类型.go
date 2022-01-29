@@ -18,6 +18,13 @@ func main() {
 	// 查看变量的数据类型
 	fmt.Printf("%T", 100)
 	fmt.Println()
+
 	// 查看变量的内存大小
 	fmt.Printf("%d", unsafe.Sizeof(100))
+	fmt.Println()
+
+	// 使用byte声明变量
+	var num byte = 30
+	fmt.Println(num)
+	
 }
