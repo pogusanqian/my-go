@@ -6,7 +6,7 @@ import "fmt"
 * 1. 字符类型使用单引号''
 * 2. go语言使用的编码是Utf-8
 * 3. go语言中没有专门的数据类型来存储字符类型, 如果存储字符类型的话, 可以使用byte类型保存(如果溢出, 可以使用int存储)
-*/
+ */
 func main() {
 	// 声明字符类型
 	var c byte = 'a'
@@ -22,5 +22,5 @@ func main() {
 
 	// 字符运算, 这里写成"a" + 10就会报错
 	var res1 = 'a' + 10
-	fmt.Println( res1)
+	fmt.Println(res1)
 }
