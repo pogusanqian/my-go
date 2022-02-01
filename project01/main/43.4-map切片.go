@@ -23,7 +23,7 @@ func main() {
 
 	// 因为我们设计的mapSlice只有两个长度, 所以这里使用append()进行动态添加
 	var city3 = map[string]string{
-		"name": "深圳",
+		"name":   "深圳",
 		"pinyin": "ShenZhen",
 	}
 	mapSlice = append(mapSlice, city3)

@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	var mymap = map[string]string {
+	var mymap = map[string]string{
 		"city1": "北京",
 		"city2": "上海",
 		"city3": "深圳",

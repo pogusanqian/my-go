@@ -27,7 +27,7 @@ func main() {
 	fmt.Println(mymap2)
 
 	// 第三种声明方式(上海后面的逗号不能省略)
-	var mymap3 = map[string]string {
+	var mymap3 = map[string]string{
 		"city1": "北京",
 		"city2": "上海",
 	}
