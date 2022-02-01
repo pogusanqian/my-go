@@ -37,5 +37,5 @@ func main() {
 	var name = "tom"
 	stu1 := Student{}
 	stu2 := &Student{}
-	TypeJudge(n1, n2, name,  stu1, stu2)
+	TypeJudge(n1, n2, name, stu1, stu2)
 }
