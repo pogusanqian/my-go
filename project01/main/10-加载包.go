@@ -12,10 +12,11 @@ import (
 	// 引入本地本模块的其他包(这种写法不需要再go-mod中进行引入)
 	"pogusanqian.com/project01/util"
 	// TODO 引入本地其他模块的包
-	// TODO 如果想要引入同一个包下的其他文件, 应该怎么引入?
 )
 
 func main() {
+	// 引入本模块本包的其他文件(这是不需要引入的, 直接使用即可)
+	// fmt.Println(myName) main包好像是比较特殊的, 不能直接引入本包中的其他文件; 在test包中就是可以的
 	fmt.Println(quote.Go())
 	fmt.Println(util.Name)
 }
