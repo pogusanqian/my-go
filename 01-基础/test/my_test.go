@@ -12,6 +12,10 @@ import (
 * 4. 测试的显示结果会显示函数执行的时间; Pass表示通过, Fail表示失败
 * 5. go test -v my_test.go 运行指定的测试文件, go test -v 运行当前目录下的所有测试文件(不会遍历子目录)
 * 6. go test -v -test.run TestAddUpper 只运行一个测试方法(-test.run是关键字)
+* 7. go test运行是由缓存的, 输出的是上次运行的结果(实际上并没有运行代码, 因为我们的代码没有改变), 如果改变了代码, 运行的就不是缓存了
+* 				go clean -testcache							清除缓存
+*   			go test -v -count=1 ./**				忽略缓存执行
+*
  */
 func TestAddUpper(t *testing.T) {
 	// 同一个包下的文件是可以直接调用的, 即使没有写在同一个文件中
