@@ -1,0 +1,15 @@
+<!-- 这个定义的model块还不能去掉 -->
+{{define "model"}}
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        {{template "content"}}
+    </body>
+</html>
+{{end}}
+
+{{block "content" .}}
+    默认模板content
+{{end}} 

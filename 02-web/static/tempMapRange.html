@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        {{range $k, $v := .}} 
+            key值: {{$k}}<br>
+            valur值: {{$v}}<br>
+        {{else}}
+            没有遍历到任何元素
+        {{end}}        
+    </body>
+</html>

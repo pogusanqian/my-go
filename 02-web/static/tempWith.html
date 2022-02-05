@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        传递过来的值: {{.}}
+        <!-- 修改传递过来的值 -->
+        {{with "zhangsan"}}
+        <div>修改之后的数据是：{{.}}</div>
+        {{end}}
+        <!-- 跳出with之后, .仍让表示是"张三" -->
+        脱离with范畴: {{.}}
+    </body>
+</html>

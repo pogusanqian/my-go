@@ -1,0 +1,10 @@
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        template1中的值: {{.}}
+        <!-- 将整个template2都拉取了过来 -->
+        {{template "tempTemplate2.html" .}}
+    </body>
+</html>
