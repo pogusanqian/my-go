@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-// 打上tag之后, 序列化成字符串的时候, Name会编程name
+// 打上tag之后, 序列化成字符串的时候, Name会变成name
 type Student struct {
 	Name string `json:"name"`
 	Age  int    `json:"age"`

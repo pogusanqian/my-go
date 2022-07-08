@@ -6,10 +6,10 @@ import (
 )
 
 func main() {
-	cpuNum := runtime.NumCPU()
-	fmt.Println("cpuNum=", cpuNum)
+	// 查看本地机器的逻辑CPU个数
+	fmt.Println("老CPU数量", runtime.NumCPU())
 
-	// TODO 设置cpu(1.8之后, 默认设置的是多核), 感觉这个函数失效了, 不起作用
-	runtime.GOMAXPROCS(4)
-	fmt.Println(runtime.NumCPU())
+	// GOMAXPROCS设置可同时执行的最大CPU数
+	runtime.GOMAXPROCS(1)
+	fmt.Println("新CPU数量", runtime.NumCPU())
 }

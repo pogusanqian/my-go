@@ -1,7 +1,3 @@
 package main
 
-import (
-	"fmt"
-)
-
-var myName = "张三三"
+var MyName = "张三三"

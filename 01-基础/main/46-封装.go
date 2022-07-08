@@ -10,7 +10,8 @@ import (
 * 2. 封装可以实现隐藏细节, 以及校验数据保证数据安全性的特点
  */
 func main() {
-	var stu = util.NewStudent("张三", 23) // 现在返回的stu是一个指针
+	var stu = util.NewStudent("张三", 23)
 	stu.SetSex("男")
+	// fmt.Println(stu.sex) // 这句话会报错, 因为sex属性并没有暴漏出来
 	fmt.Println(stu.GetSex())
 }

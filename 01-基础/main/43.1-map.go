@@ -13,12 +13,12 @@ import (
 func main() {
 	// 第一个string表示的key的数据类型, 第二个string表示的value的数据类型
 	var mymap map[string]string
-	mymap = make(map[string]string, 2) // 分配内存
+	mymap = make(map[string]string, 20) // 分配内存
 	mymap["no2"] = "李四"
 	mymap["no1"] = "张三"
 	mymap["no3"] = "王五"
 	mymap["no1"] = "zhagnsan"
-	fmt.Println(mymap)
+	fmt.Println(mymap, len(mymap))
 
 	// 第二种声明方式
 	var mymap2 = make(map[string]string)

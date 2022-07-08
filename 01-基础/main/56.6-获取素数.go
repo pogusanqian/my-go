@@ -16,8 +16,8 @@ func putNum(intChan chan int) {
 func primeNum(intChan chan int, primeChan chan int, exitChan chan bool) {
 	var flag bool
 	for {
-		num, ok := <-intChan
-		if !ok {
+		num, isClose := <-intChan
+		if !isClose {
 			break
 		}
 		// 判断是否是素数
@@ -41,9 +41,10 @@ func primeNum(intChan chan int, primeChan chan int, exitChan chan bool) {
 func main() {
 	// 定义三个管道
 	intChan := make(chan int, 1000)
-	primeChan := make(chan int, 20000)
+	primeChan := make(chan int, 2000)
 	exitChan := make(chan bool, 8)
 
+	// 开启一个协程写数据, 三个协程读数据
 	go putNum(intChan)
 	for i := 0; i < 4; i++ {
 		go primeNum(intChan, primeChan, exitChan)
@@ -59,8 +60,8 @@ func main() {
 
 	//遍历我们的 primeChan ,把结果取出
 	for {
-		res, ok := <-primeChan
-		if !ok {
+		res, isClose := <-primeChan
+		if !isClose {
 			break
 		}
 		fmt.Printf("素数=%d\n", res)

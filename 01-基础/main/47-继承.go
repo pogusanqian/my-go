@@ -1,6 +1,8 @@
 package main
 
 import (
+	"fmt"
+
 	"pogusanqian.com/project01/util"
 )
 
@@ -16,5 +18,7 @@ func main() {
 	midstu.Age = 23
 	midstu.SetSex("女") // 继承了私有属性sex
 
+	// 注意这个show方法继承的是student的方式, 再输出的时候, 输出的Age属性其实是stu的Age属性, 而不是midstu的Age属性
 	midstu.Show()
+	fmt.Println(midstu)
 }

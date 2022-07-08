@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-// init 会在main函数之前进行调用, 已完成初始化公共
+// init函数通再import导入的时候就会进行加载
 func init() {
 	fmt.Println("============init", name)
 }

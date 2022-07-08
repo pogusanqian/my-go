@@ -15,9 +15,12 @@ func test(n int) {
 	myMap[n] = res
 }
 
-// 报错: concurrent map writes: 并发操作公共资源map
+/**
+* myMap属于全局变量, 20个协程同一时间操作这个变量, 就会报错: concurrent map writes(并发操作公共资源)
+* go build -race ./main.go 打的exe文件能正常执行, 并输出有多少协程出现了竞争
+*/
 func main() {
-	// 开启200个线程计算阶乘
+	// 开启20个协程计算阶乘
 	for i := 1; i <= 20; i++ {
 		go test(i)
 	}

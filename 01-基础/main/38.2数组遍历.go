@@ -11,7 +11,7 @@ func main() {
 		fmt.Println(arr[i])
 	}
 
-	//index如果不想使用, 可以使用_忽略
+	// index如果不想使用, 可以使用_忽略
 	for index, value := range arr {
 		fmt.Println(index, value)
 	}

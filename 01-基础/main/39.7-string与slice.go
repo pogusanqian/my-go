@@ -9,7 +9,6 @@ import (
  */
 func main() {
 	var str = "helloworld"
-	var str2 = "你好世界"
 
 	// 使用切片截取数组, 修改切片值会同步修改字符串值, 因为他们操作的是同一块空间, 但是由于字符串的值是不能改变的, 所以使用string的切片是不能修改值的
 	myslice1 := str[:5]
@@ -21,7 +20,7 @@ func main() {
 	fmt.Println(string(arr))
 
 	// 转换成rune切片来处理中文数据
-	arr2 := []rune(str2)
+	arr2 := []rune(str)
 	arr2[0] = '中'
 	fmt.Println(string(arr2))
 

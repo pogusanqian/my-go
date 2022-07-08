@@ -12,5 +12,5 @@ func main() {
 	if true {
 		var name = "张三"
 	}
-	// fmt.Println(name)
+	fmt.Println(name)
 }

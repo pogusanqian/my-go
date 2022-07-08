@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-// 数组传递是, 是将原数组的值copy到了myarr, 修改myarr是不会影响arr的;
+// 数组传递时将原数组的值copy到了myarr, 修改myarr是不会影响arr的;
 // 如果想要在test方法中影响arr的值, 可以传一个指针数组过来
 // 这里传递过来数组长度只能是3
 func test(myarr [3]string) {

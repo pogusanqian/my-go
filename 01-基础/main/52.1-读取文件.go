@@ -8,13 +8,13 @@ import (
 )
 
 func main() {
-	file, err := os.Open("D://Code//my-go//project01//go.mod")
+	file, err := os.Open("D://Code//my-go//01-基础//go.mod")
 	if err != nil {
 		fmt.Println("open file err=", err)
 	}
-	defer file.Close() //要及时关闭file句柄，否则会有内存泄漏.
+	defer file.Close() //要及时关闭file句柄，否则会有内存泄漏
 
-	// 创建一个 *Reader  ，是带缓冲的; defaultBufSize = 4096 //默认的缓冲区为4096
+	// 创建一个 *Reader是带缓冲的; defaultBufSize = 4096 //默认的缓冲区为4096
 	reader := bufio.NewReader(file)
 	for {
 		str, err := reader.ReadString('\n') // 读到一个换行就结束

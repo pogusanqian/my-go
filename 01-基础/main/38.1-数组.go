@@ -16,8 +16,8 @@ func main() {
 	arr1[0] = 10
 	arr1[1] = 11
 	arr1[2] = 12
-	fmt.Println(arr1)
-	// 输出数组的地址(使用println是无法输出的)
+	fmt.Println(arr1, arr1[0])
+	// 输出数组的地址(使用println是无法输出的, 数组元素的内存空间是连续的)
 	fmt.Printf("%p, %p, %p", &arr1, &arr1[0], &arr1[1])
 
 	// 初始化方式

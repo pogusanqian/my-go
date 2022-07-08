@@ -9,7 +9,7 @@ func numAdd(num1 float64, num2 float64) float64 {
 	return num1 + num2
 }
 
-// 返回两个值
+// 返回多个值
 func calc(num1 float64, num2 float64) (float64, float64, float64, float64) {
 	sum := num1 + num2
 	sub := num1 - num2

@@ -22,6 +22,7 @@ func main() {
 	<-allChan
 	<-allChan
 	newCat := <-allChan
+	fmt.Println(len(allChan)) // 管道中的元素被取出后, 管道就成了空管道
 
 	//从管道中获取的newCat据类型是空接口, 使用newCat.Name是不能通过编译的, 但是printf在运行的时候会打印出具体的类型
 	fmt.Printf("newCat=%T , newCat=%v\n", newCat, newCat)

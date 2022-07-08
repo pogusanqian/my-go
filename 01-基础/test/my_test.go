@@ -1,7 +1,6 @@
 package test
 
 import (
-	"fmt"
 	"testing"
 )
 
@@ -12,7 +11,7 @@ import (
 * 4. 测试的显示结果会显示函数执行的时间; Pass表示通过, Fail表示失败
 * 5. go test -v my_test.go 运行指定的测试文件, go test -v 运行当前目录下的所有测试文件(不会遍历子目录)
 * 6. go test -v -test.run TestAddUpper 只运行一个测试方法(-test.run是关键字)
-* 7. go test运行是由缓存的, 输出的是上次运行的结果(实际上并没有运行代码, 因为我们的代码没有改变), 如果改变了代码, 运行的就不是缓存了
+* 7. go test运行是有缓存的, 输出的是上次运行的结果(实际上并没有运行代码, 因为我们的代码没有改变), 如果改变了代码, 运行的就不是缓存了
 * 				go clean -testcache							清除缓存
 *   			go test -v -count=1 ./**				忽略缓存执行
 *
@@ -22,12 +21,9 @@ func TestAddUpper(t *testing.T) {
 	res := addUpper(10)
 	if res != 55 {
 		// 输出错误日志
-		t.Fatalf("AddUpper(10) 执行错误，期望值=%v 实际值=%v\n", 55, res)
+		t.Fatalf("执行错误，期望值=%v 实际值=%v\n", 55, res)
 	}
 	// 输出正确日志
-	t.Logf("AddUpper(10) 执行正确...")
+	t.Logf("成功执行函数")
 }
 
-func TestHello(t *testing.T) {
-	fmt.Println("==========TestHello被调用..")
-}
