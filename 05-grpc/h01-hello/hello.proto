@@ -1,0 +1,15 @@
+syntax = "proto3";
+// proto文件格式化需要安装clang-formate, clang是llvm项目中的一个子项目
+package hello;
+// path表示的是生成pb文件的路径, ./不能省略
+// name表示pb文件的包名, 如果name省略, 则包名就是路径名
+option go_package = "./pb;hello";
+
+// 注意这里类名和属性的大小写与生成的结构体是没有任何关系的, 生成结构体的名称和属性永远都是大写的
+// 属性小写表示的是序列化之后的属性是小写
+message Student {
+  string name = 1;
+  int32 age = 2;
+  optional string sex = 3;
+  repeated string school = 4;
+}

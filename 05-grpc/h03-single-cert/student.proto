@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package student;
+option go_package = "./stub;studentpb";
+import "google/protobuf/empty.proto";
+
+service StudentService {
+  rpc GetStudentById(GetStudentByIdReq) returns (Student);
+  rpc GetStudents(google.protobuf.Empty) returns (GetStudentsRsp);
+}
+
+message Student {
+  string name = 1;
+  int32 age = 2;
+  string sex = 3;
+}
+
+message GetStudentByIdReq { int32 id = 1; }
+
+message GetStudentsRsp { repeated Student students = 1; }

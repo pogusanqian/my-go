@@ -20,5 +20,10 @@ func (stu Student) show() {
 func main() {
 	var stu = Student{"张三", 23}
 	stu.show()
-	fmt.Println("--------", stu.Name)
+	fmt.Println("--------", stu)
+
+	// 给结构体绑定的方法, 结构体指针也能调用, 只不过在调用show方法是传递的是结构体类型, 不是结构体指针类型
+	var stu2 = &Student{"张三", 23}
+	stu2.show()
+	fmt.Print(stu2)
 }
